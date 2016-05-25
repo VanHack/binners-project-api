@@ -13,7 +13,7 @@ var itemsSchema = new Schema({
         type: String
     },
     quantity: {
-        type: Number
+        type: String
     }
 });
 /**

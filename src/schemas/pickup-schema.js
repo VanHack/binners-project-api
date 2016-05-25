@@ -26,7 +26,7 @@ function PickupSchema() {
         items: Joi.array().items(Joi.object({
             type: Joi.string().valid('can', 'bottle').description('Type of item'),
             packageSize: Joi.string().valid('small', 'medium', 'large').description('Size classification of the units'),
-            quantity: Joi.number().description('Number of packages of this type and size')
+            quantity: Joi.string().description('Number of packages of this type and size. May be a string.')
         })),
         authorization: Joi.object({
             'Authorization': Joi.string().description('Authorization Token')
