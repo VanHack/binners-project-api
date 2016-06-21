@@ -130,17 +130,18 @@ exports.register = function(server, options, next) {
 	* @apiName Create new User
 	* @apiGroup Users
 	*
-	* @apiParam {String} userName
+	* @apiParam {String} name
 	* @apiParam {String} email
 	* @apiParam {String} password
 	* @apiParam {String} phone
 	* @apiParam {Boolean} active
-	 *
+  * @apiParam {Array} addresses
+	*
 	* @apiSuccessExample Success-Response:
 	*     HTTP/1.1 200 OK
 	*       {
 	*	   		__v: 0
-	*			userName: "Samuel Castro"
+	*			name: "Samuel Castro"
 	*			email: "samuelcastrosilva@gmail.com"
 	*			password: "$2a$08$ewJwmQli/YWOThtMlcR3hubOKxaYr4/nCFy1.TqsCxuxpwud98T.q"
 	*			_id: "55ae85d9c5e6883b23dd1d71"
