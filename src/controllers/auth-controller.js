@@ -35,13 +35,13 @@ AuthController.prototype = (function () {
                 if (!user) {
                     var err = Boom.notFound('', errors.USER_NOT_FOUND);
                     err.output.payload.details = err.data;
-                    reply(err);
+                    return reply(err);
                 }
 
                 if (!user.validatePassword(auth.password)) {
                     var err = Boom.badData('', errors.INVALID_PASSWORD);
                     err.output.payload.details = err.data;
-                    reply(err);
+                    return reply(err);
                 }
 
                 try {
@@ -99,7 +99,7 @@ AuthController.prototype = (function () {
                 if (!user) {
                     var err = Boom.notFound('', errors.EMAIL_NOT_FOUND);
                     err.output.payload.details = err.data;
-                    reply(err);
+                    return reply(err);
                 }
 
                 user.doHashReset(function (err, token) {
